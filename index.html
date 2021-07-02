@@ -1,0 +1,89 @@
+  
+<!DOCTYPE html>
+<html lang="en" id="hhh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="answer-wrapper">
+            <a href="{% url 'conspect:show_all' %}"><input type="button" value="Посмотреть Конспекты" id="show_cons"></a>
+                <input type="button" value="Сохранить Конспект" id="save_cons">
+
+            <input type="button" value="Скачать Конспект" id="get_cons">
+            <a href="{% url 'conspect:subj_creation' %}"><input type="button" value="Добавить предмет" id="get_cons1"></a>
+            <a href="{% url 'conspect:comp_creation' %}"><input type="button" value="Добавить структурный компонент" id="get_cons2"></a>
+            <a href="{% url 'conspect:answ_creation' %}"><input type="button" value="Добавить вариант" id="get_cons3"></a>
+
+
+
+                <form action="{% url 'accounts:logout' %}" method="GET">
+                    <input type="submit" value="Выйти" id="show_cons3">
+                </form>
+                    <a href="{% url 'accounts:register' %}"><input type="button" value="Зарегистрировать пользователя" id="show_cons4"></a>
+                <form action="{% url 'accounts:login' %}" method="GET">
+                    <input type="submit" value="Войти" id="show_cons1">
+                </form>
+        </div>
+
+
+
+        <div class="question-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'conspect:detail_lesson' item.pk %}">{{item}}</a></li>
+                </ul>
+            </nav>
+
+				<section class="questions" id="question">
+                <h3 class="questions_title">Выбери подходящий для своего конспекта вариант :</h3>
+
+					 <!-- Tempale question -->
+                <div class="question_block">
+						 	<h4 class="title_topic">ALGEBRA</h4>
+							 <div class="answers">
+								<div class="answer">Деление</div>
+								<div class="answer">Больше или меньше</div>
+								<div class="answer">Сложение</div>
+							</div>
+						</div>
+
+						<div class="question_block">
+							<h4 class="title_topic">GEOMETRY</h4>
+							<div class="answers">
+							  <div class="answer">Деление</div>
+							  <div class="answer">Больше или меньше</div>
+							  <div class="answer">Сложение</div>
+						  </div>
+					  </div>
+            </section>
+
+			  <section class="total" id="total">
+                <h3 class="total_title">Результат :</h3>
+
+					 
+					 <!-- template result -->
+					 <div class="total_block" order = '0' id="totalt">
+						<h4 class="title_topic">GEOMETRY</h4>
+						<div class="results">
+						  <div class="result">Деление</div>
+					  </div>
+				  </div>
+
+
+				  
+            </section>
+        </div>
+    </div>
+
+	 <script src="JS/app.js"></script>
+    <script src="JS/6.js"></script>
+	 <script src="JS/modal.js"></script>
+</body>
+</html>
+
