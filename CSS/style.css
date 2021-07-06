@@ -81,10 +81,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	display: flex;
 	flex-wrap: wrap;
 	padding-bottom: 20px;
-	width: 50%;
-	justify-content: space-between;
+	align-items: center;
 }
 .answer-wrapper input{
+	margin-right: 12px;
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
@@ -110,6 +110,52 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 
+/* Navigation styles */
+.nav_wrapp{
+	border-radius: 12px;
+	position: relative;
+	min-width: 30px;
+	height: 100px;
+	text-align: center;
+	background-color: antiquewhite;
+	cursor: pointer;
+	box-shadow: 0px 2px 6px lightgray;
+	/* writing-mode: vertical-lr; */
+}
+.nav_categorys{
+	/* z-index: 1; */
+	position: absolute;
+	border-radius: 12px;
+	padding:12px 21px;
+	max-height: 102px;
+	min-width: 210px;
+	opacity: 0;
+	/* text-align: center; */
+	background-color: rgb(250, 235, 215);
+	box-shadow: 0px 2px 8px black;
+	overflow-y: scroll;
+	visibility: hidden;
+	transition: 600ms;
+}
+/* .index_open{
+	z-index: 1;
+} */
+.visable{
+	opacity: 1;
+	visibility:visible;
+}
+/* .hidden{
+	opacity: 0;
+	/* z-index: -120; */
+
+
+/* .nav_categorys.hidden{
+} */
+
+.nav_categorys li{
+	margin-bottom: 9px;
+	font-size: 21px;
+}
 
 
 
@@ -441,3 +487,4 @@ td{
 .button-cancel:hover, .button-ok:hover{
 	background-color: #a7b1d5;
 }
+
